@@ -89,15 +89,22 @@ main {
 }
 
 footer {
+    margin-top: 650px;
     height: 103px;
     width: 100%;
-    background-image: url("./assets/imgs/Subtract.png");
+    /* background-image: url("./assets/imgs/Subtract.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }
 
 .footer-section {
@@ -114,14 +121,34 @@ footer {
 }
 
 .img-content {
+    margin-top: 56px;
+    margin-bottom: 56px;
+    max-width: 1440px;
     height: 1036px;
-    width: 100%;
+    width: 343px;
     display: flex;
+    column-gap: 16px;
+    row-gap: 16px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-dialog {
+.imgs-content {
+    height: 150px;
+    width: 150px;
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.imgs-content:hover {
+    height: 165px;
+    width: 165px;
+    
+    
+}
+
+/* dialog {
     
     height: 664px;
     width: 343px;
@@ -133,5 +160,4 @@ dialog {
 
 .dialog-header {
     display: flex;
-}
-
+} */
