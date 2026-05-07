@@ -1,15 +1,12 @@
-// const dialogRef = document.getElementById("dialog");
+const dialogRef = document.getElementById("myDialog");
 
-// function openDialog(){
-//     dialogRef.showModal();
-// }
+function openDialog() {
+    dialogRef.showModal();
+}
 
-// function closeDialog(){
-//     dialogRef.close();
-// }
-
-
-
+function closeDialog() {
+    dialogRef.close();
+}
 
 const imgs = [
     "assets/imgs/Component 6.png",
@@ -23,15 +20,26 @@ const imgs = [
     "assets/imgs/Component 14.png",
     "assets/imgs/Component 15.png",
     "assets/imgs/Component 16.png",
-    "assets/imgs/gallery.png"
+    "assets/imgs/gallery.png",
 ];
 
 const container = document.getElementById("container");
 
 function renderImgs() {
     for (let i = 0; i < imgs.length; i++) {
-        container.innerHTML += `<img class="imgs-content" src="${imgs[i]}">`
+        container.innerHTML += `<img onclick="openDialog()" class="imgs-content" src="${imgs[i]}">`;
     }
 }
 
 renderImgs();
+
+// function renderDialog() {
+//     const dialog = `/*html*/
+//         <dialog>
+//         <header>
+//         <h2></h2>
+//         </header>
+//         <section></section>
+//         </dialog>
+//     `
+// }

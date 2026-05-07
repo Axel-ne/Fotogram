@@ -84,15 +84,12 @@ main {
 
 .main-section {
     margin-top: 20px;
-    height: 123px;
-    width: 315px;
 }
 
 footer {
     margin-top: 650px;
     height: 103px;
     width: 100%;
-    /* background-image: url("./assets/imgs/Subtract.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -108,11 +105,31 @@ footer {
 }
 
 .footer-section {
-    height: 103px;
+    margin-top: 25px;
+    height: 80px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    img {
+        height: 24px;
+        width: 100px;
+    }
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-text {
+    p {
+        font-family: Figtree;
+        font-size: 14px;
+        color: rgba(153, 172, 179, 1);
+    }
 }
 
 .da-img {
@@ -123,9 +140,8 @@ footer {
 .img-content {
     margin-top: 56px;
     margin-bottom: 56px;
-    max-width: 1440px;
-    height: 1036px;
-    width: 343px;
+
+    width: 100%;
     display: flex;
     column-gap: 16px;
     row-gap: 16px;
@@ -135,29 +151,22 @@ footer {
 }
 
 .imgs-content {
-    height: 150px;
-    width: 150px;
-    transition: all 100ms ease-in-out;
+    height: 120px;
+    width: 120px;
+    transition: all 200ms ease-in-out;
     cursor: pointer;
 }
 
 .imgs-content:hover {
     height: 165px;
     width: 165px;
-    
-    
 }
 
-/* dialog {
-    
+dialog {
     height: 664px;
     width: 343px;
     background-color: rgba(9, 33, 42, 1);
-    border-radius: 10px;
+    border-radius: 40px;
     top: 250px;
     left: 750px;
 }
-
-.dialog-header {
-    display: flex;
-} */
