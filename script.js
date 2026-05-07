@@ -1,9 +1,11 @@
-const dialogRef = document.getElementById("dialog");
+// const dialogRef = document.getElementById("dialog");
 
-function openDialog(){
-    dialogRef.showModal();
-}
+// function openDialog(){
+//     dialogRef.showModal();
+// }
 
-function closeDialog(){
-    dialogRef.close();
-}
+// function closeDialog(){
+//     dialogRef.close();
+// }
+
+const imgsarr = [];
