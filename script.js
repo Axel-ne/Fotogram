@@ -20,7 +20,7 @@ const imgs = [
     "assets/imgs/Component 14.png",
     "assets/imgs/Component 15.png",
     "assets/imgs/Component 16.png",
-    "assets/imgs/gallery.png",
+    "assets/imgs/gallery.png"
 ];
 
 const container = document.getElementById("container");
