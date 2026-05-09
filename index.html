@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/icons/fotogram-icon.png">
 </head>
 
-<body">
+<body onload="renderImgs()">
     <header>
         <div class="header-content">
             <img src="./assets/icons/fotogram-icon.png" alt="">
@@ -23,23 +23,23 @@
 
             </div>
         </section>
-        <dialog id="myDialog">
+        <dialog  id="myDialog">
             <header class="dialog-header">
                 <div class="dialog-header-text">
-                <p>test</p>
+                <p id="img-text"></p>
                 </div>
                 <div class="dialog-header-button">
                     <button onclick="closeDialog()"><img src="./assets/icons/Close icon.png" alt=""></button>
                 </div>
             </header>
-            <section class="dialog-section">
-                <img src="./assets/imgs/Component 11.png" alt="">
+            <section  id="dialog-render" class="dialog-section">
+                
             </section>
             <footer class="dialog-footer">
                 <div class="dialog-footer-content">
-                    <button class="dialog-button" href=""><img src="./assets/icons/Arrow-Left.png" alt=""></button>
-                    <p>1/12</p>
-                    <button class="dialog-button"><img src="./assets/icons/Arrow-Right (1).png" alt=""></button>
+                    <button onclick="previusImg()" class="dialog-button" href=""><img src="./assets/icons/Arrow-Left.png" alt=""></button>
+                    <p id="img-counter">1/12</p>
+                    <button onclick="nextImg()" class="dialog-button"><img src="./assets/icons/Arrow-Right (1).png" alt=""></button>
                 </div>
             </footer>
         </dialog>
