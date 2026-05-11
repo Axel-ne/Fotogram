@@ -52,9 +52,11 @@ header {
 }
 
 .header-content {
+    max-width: 1440px;
     height: 32px;
-    width: 168px;
+    width: 100%;
     display: flex;
+    justify-content: center;
     gap: 10px;
 
     p {
@@ -69,7 +71,6 @@ header {
 
 main {
     width: 100%;
-    height: 100dvh;
     display: flex;
     justify-content: center;
 
@@ -83,11 +84,12 @@ main {
 }
 
 .main-section {
+    max-width: 1440px;
     margin-top: 20px;
 }
 
 .footer-content {
-    margin-top: 350px;
+    margin-top: 150px;
     height: 103px;
     width: 100%;
     background-repeat: no-repeat;
@@ -101,6 +103,7 @@ main {
         position: absolute;
         bottom: 0;
         width: 100%;
+        height: 128px;
     }
 }
 
@@ -168,13 +171,20 @@ dialog {
     background-color: rgba(9, 33, 42, 1);
     border-radius: 40px;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 40px;
+}
+
+dialog::backdrop {
+    opacity: 0.5;
+    background-color: white;
 }
 
 .dialog-header {
+    display: flex;
+    justify-content: center;
     height: 69px;
     width: 100%;
-    padding: 0px 16px 32px 16px;
+    padding: 10px 16px 32px 16px;
 }
 
 .dialog-header-button {
@@ -187,11 +197,12 @@ dialog {
     height: 100%;
     width: 100%;
     display: flex;
+    justify-content: center;
     align-items: end;
 
     p {
         color: white;
-        font-size: 24px;
+        font-size: 20px;
         font-family: Figtree;
         font-weight: 700;
     }
@@ -219,7 +230,7 @@ background-color: rgb(63, 61, 61);
     width: 100%;
 
     img {
-        width: 300px;
+        width: 250px;
     }
 }
 
@@ -244,4 +255,50 @@ background-color: rgb(63, 61, 61);
         font-size: 16px;
         font-weight: 500;
     }
+}
+
+@media screen and (min-width: 768px) {
+    dialog {
+        height: 680px;
+        width: 680px;
+    }
+
+.dialog-header-text {
+
+    p {
+        font-size: 24px;
+    }
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+.dialog-section {
+    img {
+        height: 380px;
+        width: 560px;
+    }
+}
+
+.dialog-footer {
+    height: 150px;
+}
+
+.dialog-footer-content {
+    width: 260px;
+}
+
+.footer-content {
+    height: 150px;
+    
+}
+
+main {
+    margin-top: 100px;
+    height: 78dvh;
+}
+
 }
