@@ -20,26 +20,24 @@
         <section class="main-section">
             <h1>Your personal photo album</h1>
             <div tabindex="0" id="container" class="img-content">
-
+                <p id="container"></p>
             </div>
         </section>
-        <dialog  id="myDialog">
+        <dialog id="myDialog">
             <header class="dialog-header">
-                <div class="dialog-header-text">
-                    <p id="img-text"></p>
-                </div>
-                <div class="dialog-header-button">
-                    <button onclick="closeDialog()"><img src="./assets/icons/Close icon.png" alt=""></button>
-                </div>
+                <p id="img-text"></p>
+                <button onclick="closeDialog()"><img src="./assets/icons/Close icon.png" alt=""></button>
             </header>
-            <section   id="dialog-render" class="dialog-section">
-                
+            <section id="dialog-render" class="dialog-section">
+
             </section>
             <footer class="dialog-footer">
                 <div class="dialog-footer-content">
-                    <button onclick="previusImg()" class="dialog-button" href=""><img src="./assets/icons/Arrow-Left.png" alt=""></button>
+                    <button onclick="previusImg()" class="dialog-button" href=""><img
+                            src="./assets/icons/Arrow-Left.png" alt=""></button>
                     <p id="img-counter">1/12</p>
-                    <button onclick="nextImg()" class="dialog-button"><img src="./assets/icons/Arrow-Right (1).png" alt=""></button>
+                    <button onclick="nextImg()" class="dialog-button"><img src="./assets/icons/Arrow-Right (1).png"
+                            alt=""></button>
                 </div>
             </footer>
         </dialog>
@@ -57,6 +55,6 @@
         </section>
     </footer>
     <script src="script.js"></script>
-    </body>
+</body>
 
 </html>

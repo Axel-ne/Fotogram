@@ -40,10 +40,12 @@
 
 body {
     background-color: rgba(6, 23, 30, 1);
+    min-height: 100dvh;
+    
 }
 
 header {
-    height: 72px;
+    height: 64px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -71,6 +73,7 @@ header {
 
 main {
     width: 100%;
+    min-height: calc(100dvh - 164px - 128px);
     display: flex;
     justify-content: center;
 
@@ -89,8 +92,7 @@ main {
 }
 
 .footer-content {
-    margin-top: 150px;
-    height: 103px;
+    height: 128px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -142,7 +144,6 @@ main {
 
 .img-content {
     margin-top: 56px;
-    margin-bottom: 56px;
 
     width: 100%;
     display: flex;
@@ -161,8 +162,8 @@ main {
 }
 
 .imgs-content:hover {
-    height: 165px;
-    width: 165px;
+    border: 1px solid lightblue;
+    border-radius: 10px;
 }
 
 dialog {
@@ -172,6 +173,11 @@ dialog {
     border-radius: 40px;
     margin: auto;
     padding-top: 40px;
+    overscroll-behavior: contain;
+}
+
+dialog :open {
+    overflow: hidden;
 }
 
 dialog::backdrop {
@@ -181,17 +187,24 @@ dialog::backdrop {
 
 .dialog-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 69px;
     width: 100%;
     padding: 10px 16px 32px 16px;
 }
 
 .dialog-header-button {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: flex-end;
 }
+
+#img-text {
+        color: white;
+        font-size: 20px;
+        font-family: Figtree;
+        font-weight: 700;
+    }
 
 .dialog-header-text {
     height: 100%;
@@ -221,7 +234,7 @@ button {
 }
 
 .dialog-button:hover {
-background-color: rgb(63, 61, 61);
+    background-color: rgb(63, 61, 61);
 }
 
 .dialog-section {
@@ -260,45 +273,42 @@ background-color: rgb(63, 61, 61);
 @media screen and (min-width: 768px) {
     dialog {
         height: 680px;
-        width: 680px;
+        width: 480px;
     }
 
-.dialog-header-text {
-
-    p {
-        font-size: 24px;
+    .dialog-header-text {
+        p {
+            font-size: 24px;
+        }
     }
-}
 
-.header-content {
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 50px;
-}
-
-.dialog-section {
-    img {
-        height: 380px;
-        width: 560px;
+    .header-content {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 50px;
     }
-}
 
-.dialog-footer {
-    height: 150px;
-}
+    .dialog-section {
+        img {
+            height: 400px;
+            width: 400px;
+        }
+    }
 
-.dialog-footer-content {
-    width: 260px;
-}
+    .dialog-footer {
+        height: 150px;
+    }
 
-.footer-content {
+    .dialog-footer-content {
+        width: 260px;
+    }
+
+    /* .footer-content {
     height: 150px;
     
-}
+} */
 
-main {
-    margin-top: 100px;
-    height: 78dvh;
-}
-
+    main {
+        margin-top: 100px;
+    }
 }
