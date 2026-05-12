@@ -6,22 +6,29 @@ const imgCounter = document.getElementById("img-counter");
 
 const imgText = document.getElementById("img-text");
 
+const container = document.getElementById("container");
+
 let currentIndex = 0;
 
-function openDialog(j) {
-    currentIndex = j;
-    dialogRendeer.innerHTML = `<img  src="${imgs[j]}">`;
-    dialogRef.showModal();
-    imgText.innerText = imgs[j];
-    updateCounter();
-}
 
-function closeDialog() {
-    dialogRef.close();
-}
+
+const imgDescription = [
+    "Picture-1",
+    "Picture-2",
+    "Picture-3",
+    "Picture-4",
+    "Picture-5",
+    "picture-6",
+    "picture-7",
+    "picture-8",
+    "picture-9",
+    "picture-10",
+    "picture-11",
+    "picture-12"
+];
 
 const imgs = [
-    "./assets/imgs/Picture-1.png",
+    "./assets/imgs/Picture-1.jpg",
     "./assets/imgs/Picture-2.png",
     "./assets/imgs/Picture-3.png",
     "./assets/imgs/Picture-4.png",
@@ -35,7 +42,17 @@ const imgs = [
     "./assets/imgs/Picture-12.png",
 ];
 
-const container = document.getElementById("container");
+function openDialog(j) {
+    currentIndex = j;
+    dialogRendeer.innerHTML = `<img  src="${imgs[j]}">`;
+    dialogRef.showModal();
+    imgText.innerText = imgDescription[j];
+    updateCounter();
+}
+
+function closeDialog() {
+    dialogRef.close();
+}
 
 function renderImgs() {
     for (let i = 0; i < imgs.length; i++) {
@@ -50,7 +67,7 @@ function nextImg() {
     }
 
     dialogRendeer.innerHTML = `<img src="${imgs[currentIndex]}">`;
-    imgText.innerText = imgs[currentIndex];
+    imgText.innerText = imgDescription[currentIndex];
     updateCounter();
 }
 
@@ -61,7 +78,7 @@ function previusImg() {
     }
 
     dialogRendeer.innerHTML = `<img src="${imgs[currentIndex]}">`;
-    imgText.innerText = imgs[currentIndex];
+    imgText.innerText = imgDescription[currentIndex];
     updateCounter();
 }
 
